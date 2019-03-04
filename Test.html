@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<input name="1" id="1" value="">
+<input name="2" id="2" value="">
+<input name="3" id="3" value="" readonly>
+
+<script>
+    var input = $('[name="1"],[name="2"]'),
+    input1 = $('[name="1"]'),
+    input2 = $('[name="2"]'),
+    input3 = $('[name="3"]');
+input.change(function () {
+    var val1 = (isNaN(parseInt(input1.val()))) ? 0 : parseInt(input1.val());
+    var val2 = (isNaN(parseInt(input2.val()))) ? 0 : parseInt(input2.val());
+    input3.val(val1 + val2);
+});
+    </script>
+
+
+<body>
+</body>
+</html>
